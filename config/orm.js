@@ -40,6 +40,7 @@ var orm = {
         queryString += ") ";
         queryString += "VALUES (";
         queryString += printQuestionMarks(vals.length);
+        queryString += ") ";
         connection.query(queryString, vals, function(err,result){
             if (err) {
                 throw err;

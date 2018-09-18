@@ -1,0 +1,33 @@
+body{
+    background-image:url("../images/burger-background-10.jpg");
+    background-position:center;
+    background-size:cover;
+    background-attachment: fixed;
+       
+}
+h1{
+    text-align: center;
+    color:white;
+    font-family:"Permanent Marker", cursive;
+    margin-top:10px;
+}
+#notDevoured{
+    margin-top:50px;
+    font-family: 'Patrick Hand', cursive;
+   
+}
+#devoured{
+    margin-top:50px;
+   
+    font-family: 'Patrick Hand', cursive;
+   
+    
+}
+#submitCard{
+   margin-top:30px;
+   text-align: center;
+   font-family: 'Patrick Hand', cursive;
+   font-size:25px;
+   margin-left:250px;
+    
+}
