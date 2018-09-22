@@ -8,7 +8,7 @@ $(function() {
       devoured: "true"
     };
 
-    $.ajax("/api/burger/" + id, {
+    $.ajax("/api/burgers/" + id, {
       type: "PUT",
       data: burgerInBelly
     }).then(function() {
@@ -16,18 +16,16 @@ $(function() {
       location.reload();
     });
   });
-  //     //Add a burger
+  //Add a burger
   $(".create-form").on("submit", function(event) {
     event.preventDefault();
-   userValidation();
+   //userValidation();
     var newBurger = {
-      burger_name: $("#addBurger")
-        .val()
-        .trim(),
+      burger_name: $("#addBurger").val().trim(),
       devoured: 0
     };
 
-    $.ajax("/api/burger", {
+    $.ajax("/api/burgers/", {
       type: "POST",
       data: newBurger
     }).then(function() {
@@ -35,6 +33,21 @@ $(function() {
       location.reload();
     });
   });
+
+  //Delete a burger
+  $(".throwOutBurger").on("click", function (event) {
+    console.log("click");
+    var id = $(this).data("id");
+
+    //Delete Request sent to Database
+    $.ajax("/api/burgers/" + id, {
+        type: "DELETE",
+    }).then(function() {
+        console.log("Burger Removed!", id);
+        // Reloading to show updated list
+        location.reload();
+    });
+  })
 });
 function userValidation(){
     var input = $("#addBurger").val();

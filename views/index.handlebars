@@ -1,35 +1,35 @@
 <div class="container">
    
-    <h1>The Best Burgers Ever!</h1>
+    <h1>The Best Burger You Ever Ate!</h1>
     
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-8">
             <div class="card" id="submitCard">
-                <div class="card-body">
+                <div class="card-body" id="addABurger">
                     <form class="create-form">
                         <div class="form-group">
-                            <label for="addBurger">Enter a Burger</label>
+                            <label for="addBurger">Enter Your Favorite Burger!</label>
+                            <br>
                             <input type="text" id="addBurger" name="burgerName">
                         </div>
-                        <button type="submit">Add A Burger</button>
+                        <button type="submit" class = "btn btn-secondary" id="burger"><img src = "/assets/images/32x32.png">   Add Favorite Burger</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 
-
     <div class="row">
         <div class="col-md-4">
             <div class="card" id="notDevoured" >
-                <div class="card-header">
+                <div class="card-header" id="notDevouredHead">
                     <h3>Burgers Not Devoured</h3>
                 </div>
-                <div class="card-body">
+                <div class="card-body" id ="notDevoured2">
                     <ul>
                         {{#each burgers}}
                         {{#unless devoured}}
-                        {{>devours/devoured-block devour=false}}
+                        <div class = "card" id="burgerDevouredCard">{{>devours/devoured-block devour=false}}</div>
                         {{/unless}}
                         {{/each}}
                     </ul>
@@ -39,16 +39,16 @@
 
         <div class="col-md-4">
             <div class="card" id="devoured" >
-                <div class="card-header">
+                <div class="card-header" id="devouredHead">
                     <h3>Burgers in My Belly!</h3>
                 </div>
                 <div class="card-body">
                     <ul>
                         {{#each burgers}}
                         {{#if devoured}}
-                        <li>
-                            {{this.burger_name}}
-                        </li>
+                        <ul>
+                          <div class = "card" id="burgersBellyCard"> {{>throwOut/throwAway-block devour=true}}</div>
+                        </ul>
                         {{/if}}
                         {{/each}}
                     </ul>
@@ -58,3 +58,20 @@
     </div>
     
 </div>
+<nav class="navbar fixed-bottom">
+    <div id = "links">
+                        <p>
+                            <a href="https://www.linkedin.com/in/brandy-nicholson-2994b884/">
+                                <i id ="linkedIn" class="fab fa-linkedin fa-2x"></i>
+                            
+                            </a>
+                            <a href="https://github.com/blnicholson/Friend-Finder-App.git">
+                                <i class="fab fa-github  fa-2x"></i> 
+                            </a>
+                        </p>
+                    </div>
+        
+        <span class="navbar-text ">
+            Get in My Belly! &#169 2018
+        </span>
+    </nav>

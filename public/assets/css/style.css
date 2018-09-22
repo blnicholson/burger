@@ -1,33 +1,97 @@
-body{
-    background-image:url("../images/burger-background-10.jpg");
-    background-position:center;
-    background-size:cover;
-    background-attachment: fixed;
-       
+body {
+  background-image: url("../images/burger-background-10.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  color:white;
 }
-h1{
-    text-align: center;
-    color:white;
-    font-family:"Permanent Marker", cursive;
-    margin-top:10px;
+h1 {
+  text-align: center;
+  color:rgb(255,255,0);
+  font-family: "Permanent Marker", cursive;
+  margin-top: 10px;
 }
-#notDevoured{
-    margin-top:50px;
-    font-family: 'Patrick Hand', cursive;
-   
+.container {
+  margin-left: 250px;
 }
-#devoured{
-    margin-top:50px;
-   
-    font-family: 'Patrick Hand', cursive;
-   
-    
+.card-footer{
+  border-color:red;
 }
-#submitCard{
-   margin-top:30px;
-   text-align: center;
-   font-family: 'Patrick Hand', cursive;
-   font-size:25px;
-   margin-left:250px;
-    
+#burger{
+  color:lime;
+  font-family: "Roboto", cursive
+}
+#addABurger {
+  background-color: transparent;
+  font-family: "Permanent Marker", cursive;
+  color:rgb(255,255,0);
+ 
+}
+#notDevouredHead{
+  text-align: center;
+  color:rgb(255,255,0);
+  font-family: "Permanent Marker", cursive;
+  border-color:rgb(255,255,0);
+  
+}
+#devouredHead{
+  text-align: center;
+  color:rgb(255,255,0);
+  font-family: "Permanent Marker", cursive;
+  border-color:rgb(255,255,0);
+
+}
+#burgerDevouredCard {
+  text-align: center;
+  margin-left:-45px;
+  margin-top:10px;
+  background-color:transparent;
+  border-color:red;
+  color:lime;
+}
+
+#burgersBellyCard {
+  margin-top:10px;
+  text-align: center;
+  margin-left:-85px;
+  background-color:transparent;
+  border-color:red;
+  color:lime
+}
+
+#notDevoured {
+  margin-top: 50px;
+  font-family: "Roboto", cursive;
+  background-color:transparent;
+  border-color:rgb(255,255,0);
+}
+
+#devoured {
+  margin-top: 50px;
+  font-family: "Roboto", cursive;
+  background-color: transparent;
+  border-color:rgb(255,255,0);
+  
+}
+#submitCard {
+  margin-top: 30px;
+  text-align: center;
+  font-family: "Roboto", cursive;
+  font-size: 25px;
+  background-color:transparent;
+  border-color:rgb(255,255,0);
+}
+.navbar {
+  color:black;
+  font-family:"Roboto", cursive;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+#linkedIn{
+  margin-right:5px;
+}
+img{
+  width:32px;
+  height:32px;
 }
